@@ -1,23 +1,75 @@
 aid: bluewillow-biologics
+
 name: BlueWillow Biologics
-description: 'BlueWillow Biologics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+description: BlueWillow Biologics is a clinical‑stage biotechnology company pioneering intranasal vaccine technology. Their NanoVax® platform
+  delivers antigens via an oil‑in‑water emulsion, aiming to transform prevention and treatment of infectious diseases, pandemic preparedness,
+  and food allergies. The company originated from University of Michigan research and now advances human clinical trials of its adjuvant and delivery
+  system.
+
 url: https://raw.githubusercontent.com/api-evangelist/bluewillow-biologics/refs/heads/main/apis.yml
+
 x-type: company
+
+image: https://bluewillow.com/wp-content/uploads/2020/03/BlueWillow-Logo.jpg
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-29 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-29'
+
 modified: '2026-09-29'
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other contract found on discovered hosts.
+  evidence:
+  - url: https://api.bluewillow.com/openapi.json
+    status: 0
+  checked: '2026-09-29'
+
 tags:
+- Biotechnology
+- Intranasal Vaccines
+- Clinical Stage
+- Nanotechnology
+- Health
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bluewillow-biologics-hosts.yml
+- type: DomainSecurity
+  url: security/bluewillow-biologics-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/bluewillow-biologics_stock/
+  url: https://bluewillow.com/
+- type: About
+  url: https://bluewillow.com/about-nanobio/
+- type: News
+  url: https://bluewillow.com/news/
+- type: Contact
+  url: https://bluewillow.com/contact/
+
+apis:
+- name: BlueWillow Biologics API
+  description: API documentation not publicly available; no machine-readable contract discovered.
+  humanURL: https://bluewillow.com/
+  baseURL: null
+  aid: bluewillow-biologics:bluewillow-biologics-api
+x-enrichment:
+  date: '2026-09-29'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
